@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+.img {
+  background-image: url(./img/Screenshot\ 2023-07-25\ 214911.png);
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* slider */
+.sidebar-toggle {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  border-color: transparent;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100%;
+  background-color: #2a2a2a;
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar.open {
+  width: 40%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #2a2a2a;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.img {
+  position: relative;
+}
+
+.img button {
+  margin: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #007bff;
+  color: white;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+img {
+  background-size: cover;
+  height: 100%;
+  gap: 9rem;
+  column-gap: 1rem;
+  width: 6rem;
+  margin-bottom: 1rem;
+}
+.links {
+  gap: 1rem;
+  display: flex;
 }
